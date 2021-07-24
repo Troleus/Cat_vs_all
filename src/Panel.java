@@ -86,6 +86,8 @@ public class Panel extends JPanel implements Runnable {
 
         if(player.isJump == true){
             player.jumpDraw(g);
+        } else if(Player.isIdle){
+            player.idleDraw(g);
         } else {
             player.animDraw(g);
         }

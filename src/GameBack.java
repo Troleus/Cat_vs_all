@@ -14,11 +14,15 @@ public class GameBack {
         GameBack.speed = speed;
     }
 
-    Image [] imageAdress = {back1, back2};
+    public static int getSpeed() {
+        return speed;
+    }
+
+    Image [] imageAddress = {back1, back2};
 
     public void gameDraw(Graphics2D g){
-        g.drawImage(imageAdress[0], XMove1, 0, null);
-        g.drawImage(imageAdress[1], XMove2, 0, null);
+        g.drawImage(imageAddress[0], XMove1, 0, null);
+        g.drawImage(imageAddress[1], XMove2, 0, null);
     }
 
     public void update(){

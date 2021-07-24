@@ -11,26 +11,39 @@ public class Listeners implements KeyListener, MouseListener, MouseMotionListene
 
     @Override
     public void keyPressed(KeyEvent e) {
-        double key = e.getKeyCode();
-        if(key == KeyEvent.VK_SPACE){
+
+        double keySPACE = e.getKeyCode();
+        if(keySPACE == KeyEvent.VK_SPACE){
             player.isJump = true;
         }
 
-        double key1 = e.getKeyCode();
-        if(key == KeyEvent.VK_D){
+        double keyD = e.getKeyCode();
+        if(keyD == KeyEvent.VK_D){
+            Player.isRight = true;
+            Player.isIdle = false;
             GameBack.setSpeed(5);
+        }
+
+        double keyA = e.getKeyCode();
+        if(keyA == KeyEvent.VK_A){
+            Player.isRight = false;
+            Player.isIdle = false;
+            GameBack.setSpeed(-5);
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        double key = e.getKeyCode();
-        if(key == KeyEvent.VK_W){
-            player.isJump = false;
+
+        double keyD = e.getKeyCode();
+        if(keyD == KeyEvent.VK_D){
+            Player.isIdle = true;
+            GameBack.setSpeed(0);
         }
 
-        double key1 = e.getKeyCode();
-        if(key == KeyEvent.VK_D){
+        double keyA = e.getKeyCode();
+        if(keyA == KeyEvent.VK_A){
+            Player.isIdle = true;
             GameBack.setSpeed(0);
         }
     }
