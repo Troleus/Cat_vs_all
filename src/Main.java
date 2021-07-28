@@ -4,7 +4,7 @@ import java.awt.*;
 public class
 Main {
     public static void main(String[] args) {
-        JFrame startFrame = new JFrame("SuperCat_vs_all");
+        JFrame startFrame = new JFrame("Cat_vs_all");
 
         int centerX = (int) (Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 10);
         int centerY = (int) (Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 5);
